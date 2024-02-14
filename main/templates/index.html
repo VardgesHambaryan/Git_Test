@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <hr>
+    {% for shoe in shoes %}
+
+        <h1>Brand: {{ shoe.brand }}</h1>
+        <h1>Model: {{ shoe.model }}</h1>
+        <h1>Size: {{ shoe.size }}</h1>
+        <h1>Price: $ {{ shoe.price }}</h1>
+        <img src="{{ shoe.image.url }}" width="300px" alt="">
+        {% if shoe.description %}
+            <p>
+                shoe.description
+            </p>
+        {% endif %}
+        <hr>
+    {% endfor %}
+
+
+</body>
+</html>
